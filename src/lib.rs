@@ -19,7 +19,7 @@ fn interpolate_segment(x0: f32, y0: f32, x1: f32, y1: f32, x: f32) -> f32 {
 }
 
 fn moisture_from_freq<const N: usize>(freq: u32, lut: Vec<f32, N>) -> f32 {
-    // IMPORTANT: The LUT needs to be sorted.
+    // IMPORTANT: The LUT needs to be sorted by frequency. So 100000, 1, 16000000, 0 not inverse
     let freq_f32 = freq as f32;
     let lut_len = lut.len();
 
